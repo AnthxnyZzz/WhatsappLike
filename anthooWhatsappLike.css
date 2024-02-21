@@ -1,0 +1,330 @@
+
+/* ID*/ 
+#fenetre{
+	position: fixed;
+	top: 0;left: 0;
+	margin: auto;
+	width:100%;height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display:none;
+}
+
+#fenetremess{
+	display: block;
+	position: fixed;
+	width:80%;height: 80%;
+	border: 4px solid #003303;
+	background-color: rgb(224, 224, 224);
+}
+#fenetremess header{
+	height: min-content;
+}
+
+
+#ins{
+    align-items: center;
+    justify-content: center ;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#inscr{
+	align-items: center;
+    justify-content: center ;
+    display: flex;
+	flex-direction: column;
+	
+	display:none;
+
+}
+#connect{
+	align-items: center;
+    justify-content: center ;
+    display: flex;
+	flex-direction: column;
+	
+	display:none;
+}
+
+#transition{
+	position: fixed;
+	top: 0;left: 0;
+	margin: auto;
+	align-items: center;
+    justify-content: center ;
+    display: flex;
+	flex-direction: column;
+	width: 100%;height: 100%;
+	display: none;
+}
+#transition div{
+	position: fixed;
+	margin: auto;
+	width: 100%;height: 100%;
+	text-align: center;
+	font-family:"Comic Sans MS";
+	color:transparent;
+	font-size: 12px;
+	transition-property: color, font-size;
+    transition-duration: 1s;
+    transition-delay : 0s ;
+	
+	
+}
+
+#transition div:hover{
+	color : red;
+	font-size: 32px;
+}
+
+#quitter{
+	position: fixed;
+	width:30%;height: 30%;
+	border: 5px solid #000;
+	border-radius: 20px;
+	background-color: white;
+	align-items: center;
+    justify-content: center ;
+	flex-direction: column;
+	display: none;
+}
+
+
+
+
+/* Classes*/
+
+.logo{
+    width: 25%;
+    align-self: center;
+}
+
+.retour{
+	background-color: transparent;
+	padding-left: 0px; 
+	padding-right: 0px;
+    padding-bottom: 0px;
+	align-self: flex-start;
+}
+
+.retour:hover{
+	background-color: aqua;
+}
+.retour img{
+	width: 5%;
+}
+
+.Erreur{
+	text-decoration: underline;
+	background-color: yellow;
+}
+
+
+
+/*Overlay*/
+.overlay{
+	background-color: rgb(218, 218, 218);
+	display:flex;
+	justify-content : center;
+	align-items: center;
+}
+
+.overlay img{
+	width: 20%;
+	align-self: center;
+}
+
+
+.overlay button{
+	background-color: green;
+}
+
+.overlay .retour{
+	position: fixed;
+	top:0%;
+	left:0%;
+	background-color: transparent;
+	padding:0px;
+	padding-left: 0px; 
+	padding-right: 0px;
+    padding-bottom: 0px;
+	
+	width:15%;
+}
+
+
+/*Contact*/
+.contact{
+	height: 90%;
+}
+
+.contact button{
+	border-radius: 0px;
+	width: 100%;
+	background-color: transparent;
+	color: #000000;
+	font-family: "Comic Sans MS";
+
+}
+
+/*Fenêtres*/
+
+.ajoutercontact{
+	align-items: center;
+    justify-content: center ;
+    display: flex;
+    flex-direction: column;
+	display:none;
+}
+.supprimercontact{
+	align-items: center;
+    justify-content: center ;
+    display: flex;
+    flex-direction: column;
+	display:none;
+}
+
+.Profil{
+	align-items: center;
+    justify-content: center ;
+    display: flex;
+    flex-direction: column;
+	display:none;
+}
+
+.Profil span{
+	background-color: yellow;
+}
+
+
+.info{
+	text-decoration: underline;
+	background-color: yellow;
+}
+
+.interface{
+	display:flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+}
+
+
+.aside{
+	height: 70%;
+	width: 20%;
+	align-self: flex-start;
+	background-color: rgb(253, 253, 87);
+	border-right: 1px solid green;
+}
+
+
+.chats{
+	height: 250px;
+	width: 800px;
+	align-self:flex-end;
+	overflow: auto;
+}
+
+.chatactu{
+	font-family: "Comic Sans MS";
+	background-color: #ff0000;
+	color:white;
+	width: 300px;
+	height: 40px;
+	align-self: flex-start;
+	text-align: center;
+	border-radius: 15%;
+	border-bottom: 1px solid black;
+	
+}
+.barredecriture{
+	position:absolute;
+	bottom:0;
+	right:0;
+	display: none;
+}
+
+.bullesinterloc{
+	background-color: rgb(128, 253, 103);
+	align-self: flex-start;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.bulles{
+	background-color: lightyellow;
+	align-self: flex-end;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification{
+	position: absolute;
+	top: 10px;
+	right: 10%;
+	padding: 10px 20px;
+	background-color: #494949;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 14px;
+	box-shadow: 2px 2px 5px #000;
+	z-index: 999;
+	display: none;
+  }
+
+
+/* Balises*/
+
+html{
+	background: url("https://img.freepik.com/photos-gratuite/fond-coups-pinceau-bleu_125540-809.jpg?w=2000");
+	background-size: cover;
+}
+
+article{
+	flex:1;
+}
+
+
+article section {
+	background-color:#EFF2FB;
+	padding: 0.1em 0.3em 0.1em 0.3em;
+	border-radius: 5px;}
+
+button{
+	border: none;
+	padding: 5px;
+	padding-left: 10px; 
+	padding-right: 10px;
+    padding-bottom: 10px;
+	border-radius: 50px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 10pt;
+	background-color: #0b59eb;
+	outline: none;
+	cursor: pointer;
+}
+
+button:hover{
+	opacity: 0.7;
+}
+
+
+
+ul{
+	overflow: auto;
+	height: 100%;
+	list-style-type: none;
+}
+li{
+	background-color: rgb(104, 199, 167);
+}
+
+#fenetremess .overlay{
+	height: 150px;
+}

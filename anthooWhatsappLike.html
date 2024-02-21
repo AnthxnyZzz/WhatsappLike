@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>anthooWhatsappLike</title>
+    <meta charset="UTF-8" author="Anthony PAMPHILE">
+	<link rel="stylesheet" type="text/css" href="anthooWhatsappLike.css">
+</head>
+<body>
+
+
+    <!-- Page d'accueil -->
+    <div id="ins">
+        <img class="logo" src="https://cdf4mg.bn.files.1drv.com/y4mb-nWIMmf9EnYrbZq-4fEd_KpUqcLJiOdGtEO6pVTIPxtirvi702V0haXab4SnOAnRm8OIzbMgq-MXHe6yu8m8Bph8secgmQuJc4d5DzCTjlZZ9sD2Xrj8i8SjsN4HV0dNH0PAhe5AHd9Jl-l9C1ypw1LvYPqTjkTMlpYjTmfNBgwEFLNviK_VLcm9e0ZaREaI6s2D6g2LzLq1WQb_wXG1A/logowhatsapp.png?psid=1" />
+        <button class="inscription" onclick="inscr()">Inscription</button>
+    </BR>
+        <button class="connexion" onclick="connect()">Connexion</button>
+    </div>
+
+
+
+    <!--Page d'Inscription-->
+    <div id="inscr">
+        <button class="retour" onclick="retour()">
+            <img src="https://cdn-icons-png.flaticon.com/512/60/60793.png">
+        </button>
+            
+            
+        <img class="logo" src="https://cdf4mg.bn.files.1drv.com/y4mb-nWIMmf9EnYrbZq-4fEd_KpUqcLJiOdGtEO6pVTIPxtirvi702V0haXab4SnOAnRm8OIzbMgq-MXHe6yu8m8Bph8secgmQuJc4d5DzCTjlZZ9sD2Xrj8i8SjsN4HV0dNH0PAhe5AHd9Jl-l9C1ypw1LvYPqTjkTMlpYjTmfNBgwEFLNviK_VLcm9e0ZaREaI6s2D6g2LzLq1WQb_wXG1A/logowhatsapp.png?psid=1" />
+        <label>Adresse Mail:</label>
+        <input class="mail">
+    </BR>
+        <label>Pseudo :</label>
+        <input class="pseudo">
+    </BR>
+        <button onclick="insok()">Ok</button>
+        <span class="Erreur"></span>
+    </div>
+
+
+    <!--Page de transition à l'inscription-->
+    <div id="transition">
+        <div>Activez votre compte avec l'email que vous avez reçu.</div>
+    </div>
+
+
+
+    <!--Page de connexion-->
+    <div id="connect">
+        <button class="retour" onclick="retour()">
+            <img src="https://cdn-icons-png.flaticon.com/512/60/60793.png">
+        </button>
+            
+            
+        <img class="logo" src="https://cdf4mg.bn.files.1drv.com/y4mb-nWIMmf9EnYrbZq-4fEd_KpUqcLJiOdGtEO6pVTIPxtirvi702V0haXab4SnOAnRm8OIzbMgq-MXHe6yu8m8Bph8secgmQuJc4d5DzCTjlZZ9sD2Xrj8i8SjsN4HV0dNH0PAhe5AHd9Jl-l9C1ypw1LvYPqTjkTMlpYjTmfNBgwEFLNviK_VLcm9e0ZaREaI6s2D6g2LzLq1WQb_wXG1A/logowhatsapp.png?psid=1" />
+        <label> Entrez l'identifiant que vous avez reçu à votre inscription.</label>
+    </BR>
+        <label>Identifiant :</label>
+        <input class="identifiant" value="517f059e2f94a3fe19f15b6b8a96bf5749c966362649a28e0e18b05817707701" onfocus="this.value=''">
+    </BR>
+        <button onclick="connectok()">Ok</button>
+        <span class="Erreur"></span>
+    </div>
+
+
+    
+    <!--Toute la fenetre-->
+    <div id="fenetre">
+        <div class="notification">
+            <span class="nomdenotif"></span> vous a envoyé un message.
+        </div>
+        <!--La fenetre qui fait style application-->
+        <div id="fenetremess">
+
+            <!--Haut de la page, qui bouge pas-->
+            <header>
+                <div class="overlay">
+                    <button class="retour" onclick="retour()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/60/60793.png">
+                    </button>
+                    <img src="https://cdf4mg.bn.files.1drv.com/y4mb-nWIMmf9EnYrbZq-4fEd_KpUqcLJiOdGtEO6pVTIPxtirvi702V0haXab4SnOAnRm8OIzbMgq-MXHe6yu8m8Bph8secgmQuJc4d5DzCTjlZZ9sD2Xrj8i8SjsN4HV0dNH0PAhe5AHd9Jl-l9C1ypw1LvYPqTjkTMlpYjTmfNBgwEFLNviK_VLcm9e0ZaREaI6s2D6g2LzLq1WQb_wXG1A/logowhatsapp.png?psid=1">
+                    <button onclick="supprcontact()">Supprimer</button>
+                    <button onclick="addnewcontact()">Ajouter</button>
+                    <button onclick="consulterinfo()">Profil</button>
+                </div>
+            </header>
+
+
+
+            <!--Interface qu'on modifie-->
+            <div class="interface">
+
+
+                <!--Liste des contacts-->
+                <div class="aside">
+                    <label>Liste de contacts :</label>
+                    <UL class="contact">
+                    </UL>
+                </div>
+                
+
+                <!--Chats-->
+                <article>
+                    <div class="chatactu">Aucune discussion sélectionnée</div>
+                    <section>
+                        <div class="chats">
+                            
+                        </div>
+                    </section>   
+                    <footer class="barredecriture">
+                        <input class="ecriremessage">
+                            <button onclick="sendmessage()">send</button>
+                    </footer>
+                        
+                    
+                </article>
+                
+                
+                
+            </div>
+
+            <!--Ajouter un contact-->
+            <div class="ajoutercontact">
+                <H1>Ajouter des contacts</H1>
+                <label>Adresse mail du destinataire:</label>
+                <input class="mail" type="email">
+            </BR>
+                <button onclick="ajouter()">Ajouter</button>
+            </BR>
+            <span class="info"></span>
+            </div>
+
+
+
+            <!--Supprimer un contact-->
+            <div class="supprimercontact">
+                <H1>Supprimer un contact</H1>
+                <label> Selection de la méthode de suppression</label>
+                <select name="maliste">
+
+                    <option value="1">Adresse Mail</option>
+                
+                    <option value="2">Identifiant de la relation</option>
+                
+                </select>
+            </BR>
+                <label>Saisissez : </label>
+            </BR>
+                <input class="suprimerentre">
+            </BR>
+                <button onclick="supprimer()">Supprimer</button>
+            </BR>
+            <span class="info"></span>
+            </div>
+
+
+
+            <!--Onglet Profil-->
+            <div class="Profil">
+                <h1>Profil</h1>
+                <label>
+                    Pseudo :
+                    <span class="infopseudo"></span>
+                </label>
+                </BR>
+                <label>
+                    Adresse mail :
+                    <span class="infomail"></span>
+                </label>
+                </BR>
+                <label>
+                    Identifiant :
+                    <span class="infoident"></span>
+                </label>
+                
+            </div>
+        </div> 
+
+
+        <!--Quitter, Reload la page en gros-->
+        <div id="quitter">
+            <label>Voulez vous quitter la session ?</label>
+            <button class="reload">Oui</button>
+        </BR>
+            <button onclick="pasquitter()">Non</button>
+        </div>
+    
+    </div>
+   
+    
+
+</body>
+</html>
+<script type="text/javascript" src="anthooWhatsappLike.js"></script>
